@@ -92,7 +92,7 @@
 
         <h2 id="data">Data</h2>
 
-        <p>Include some detailed information about the dataset here. You should <a href="#">add a link</a> to the original dataset. You might also want to quote the license:</p>
+        <p>For this visualization I used the <a href="https://data.sfgov.org/Public-Safety/Fire-Department-Calls-for-Service/nuek-vuh3">Fire Department Calls for Service dataset</a> from DataSF. Here is the license:</p>
 
         <blockquote>
           <p>
@@ -101,104 +101,11 @@
           <cite>Put a citation here, possibly link to the dataset license information directly.</cite>
         </blockquote>
 
-        <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p>
-
-        <ol>
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-        </ol>
-
         <p>This will of course differ depending on the assignment and data.</p>
 
         <h3 id="wrangling">Wrangling</h3>
 
-        <p>Perhaps you had to do some data wrangling to the original dataset to prepare it for visualization. This would be a great place to discuss some of that wrangling.
-
-        <pre>
-You can even put code into these pre blocks.
-  It will preserve whitespace.
-    That is helpful for formatted code.
-        </pre>
-
-        <p>You can alternatively embed a Gist if you want. There is an "embed" button on <a href="https://gist.github.com/octocat/6cad326836d38bd3a7ae">the Gist page</a> and results in something like this:</p>
-
-        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script>
-
-        <h2 id="visualizations">Visualizations</h2>
-
-        <p>Ideally not everything would be on a single page like this example. Instead, you might want to put each section in its own webpage. You would need to carefully replicate the page template (with the header, navbar, and footer) and make the necessary updates. For example, you want the "About" navbar item to be considered active on an "About" web page.</p>
-
-        <p>For now this is just a demo. The buttons below do not go anywhere, but can be easily changed to link to different visualization pages.</p>
-
-        <p class="buttons">
-          <a class="button is-large is-success" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-line"></i>
-            </span>
-            <span>Line Chart</span>
-          </a>
-
-          <a class="button is-large is-primary" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-area"></i>
-            </span>
-            <span>Area Chart</span>
-          </a>
-
-          <a class="button is-large is-info" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-bar"></i>
-            </span>
-            <span>Bar Chart</span>
-          </a>
-
-          <a class="button is-large is-link" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-pie"></i>
-            </span>
-            <span>Pie Chart</span>
-          </a>
-        </p>
-
-        <!-- https://github.com/vega/vega-embed#basic-example -->
-        <p>It is possible to embed some visualizations directly here too. Here is <a href="https://github.com/vega/vega-embed#basic-example">an example</a> using Vega-Lite:</p>
-
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
-
-        <div id="vis"></div>
-
-        <script type="text/javascript">
-        var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-        vegaEmbed('#vis', spec).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-        </script>
-
-        <h4>Instructions</h4>
-
-        <p>You will likely need to include instructions on how to interpet and use the visualization. In the case above, if you click the three dots <i class="fas fa-ellipsis-h has-text-grey-light	"></i> above it will open a menu where you can either save the visualization to a SVG or PNG, or alternatively open it up in the online Vega Editor.</p>
-
-        <h4>Discussion</h4>
-
-        <p>You may also need other sections, like a discussion section, per-visualization section on data wrangling, and others. Because of the extra content and code visualizations take, it might be worthwhile to break up your pages into one home page and then one page per visualization.</p>
-
-        <span class="heading">Acknowledgements</span>
-
-        <p>
-          <a href="#">Link to insiration</a><br/>
-          <a href="#">Link to StackOverflow snippet</a>
-        </p>
-
-        <p class="is-6">
-          <em>Thanks to Person Name for their suggestion to do something with the visualization.</em>
-        </p>
+        <p>The original dataset has 5.26 million rows. I narrowed this down to 25,322 rows by filtering the data to only include calls made in March 2020.
 
         <h2 id="grade">Grade</h2>
 
@@ -225,25 +132,25 @@ You can even put code into these pre blocks.
             <tr>
               <td>D</td>
               <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied. Exactly how this section should look will depend on the assignment in question. There is no requirement for formatting in this way. This is just an example of what a table element might look like for this informaiton.</td>
+              <td>I wrangled the data into a hierarchical JSON format.</td>
             </tr>
 
             <tr>
               <td>C</td>
               <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
+              <td> I implemented one node/link diagram with details-on-demand interactivity in D3v5.</td>
             </tr>
 
             <tr>
               <td>B</td>
-              <td><i class="has-text-warning far fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
+              <td><i class="has-text-danger fas fa-times-circle"></i></td>
+              <td>Grade level was not satisfied.</td>
             </tr>
 
             <tr>
               <td>A</td>
               <td><i class="has-text-danger fas fa-times-circle"></i></td>
-              <td>Discussion of how this grade level was not satisfied.</td>
+              <td>Grade level was not satisfied.</td>
             </tr>
           </tbody>
 
@@ -271,7 +178,6 @@ You can even put code into these pre blocks.
                 I am a computer scientist from San Francisco with an interest in front-end development<br> and game design. I enjoy writing songs, playing basketball, and baking.
               </p>
 
-              <!-- TODO: Replace or remove tags -->
               <!-- https://bulma.io/documentation/elements/tag/ -->
               <div class="heading">Skills</div>
 
